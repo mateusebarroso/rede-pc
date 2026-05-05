@@ -110,7 +110,7 @@ a {
  a:hover::after {
     width: 100%;
 }
-@media screen and (max-width:425px) {
+@media screen and (max-width:400px) {
     body{
         color: black;
         font-size: 14px;
