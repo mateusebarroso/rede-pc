@@ -253,6 +253,9 @@ a {
 .sessao h1:hover{
     color: var(--text-primary);
 }
+.sessao{
+    margin-top:48px
+}
 .sobre{
      display: flex;
     width: 24px;
@@ -347,7 +350,7 @@ main{
         justify-content: center;
         align-items: center;
         padding: 20px 12px;
-        position: fixed;
+        position: absolute;
         bottom: 0;
        background: url("../assets/server.jpg") no-repeat center center;
         background-size: cover;
