@@ -1,0 +1,442 @@
+:root{
+    --colorYellow: yellow;
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #1a1a24;
+    --accent: #64ffda;
+    --accent-hover: #4cd6b3;
+    --text-primary: #e6e6e6;
+    --text-secondary: #a0a0a0;
+    --text-muted: #6b6b7b;
+    --border: #2a2a3a;
+    --bg-trans: ;
+    --gradient: linear-gradient(135deg, #64ffda 0%, #00b4d8 100%);
+     --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+     line-height: 1.6;
+    overflow-x: hidden;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+   
+   
+     color: var(--text-secondary);
+    
+}
+
+#container{
+    
+}
+a{
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+}
+.toggle div{
+      width: 32px;
+    height: 2px;
+    background: #fff;
+     margin: 8px;
+}
+
+.navbar{
+    
+     width: 100%; 
+    height: 55px;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+     background: rgba(10, 10, 15, 0.85);
+    z-index: 1000;
+    border-bottom: 1px solid var(--border);
+}
+.navigator{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  
+}
+
+.nav-links{
+    display: flex;
+}
+li{
+    list-style-type: none;
+}
+
+a {
+        font-size: 0.95rem;
+        font-weight: 500;
+        display: block;
+        padding: 0.4rem 0.3rem;
+        color: var(--text-secondary);
+        white-space: wrap;
+        transition: width 0.3s ease;
+        position: relative;
+  }
+
+ a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+ a:hover{
+    color: var(--accent);
+  
+   
+  }
+
+
+
+ a:hover::after {
+    width: 100%;
+}
+@media screen and (max-width:425px) {
+    body{
+        color: black;
+        font-size: 14px;
+        margin: 0;
+         background: url("../assets/server.jpg") no-repeat center center;
+    background-size: cover;
+    
+    }
+  
+    
+    .navbar{
+    width: 100%; 
+    height: 55px;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+     background: rgba(10, 10, 15, 0.85);
+    z-index: 1000;
+    border-bottom: 1px solid var(--border);
+    
+}
+
+.navigator{
+    display: none;
+}
+.active{
+    display: flex;
+}
+.navbar  .toggle div{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+     margin: 8px;
+   
+}
+
+
+
+.toggle{
+    position: absolute;
+    right: 0;
+    top: 5px;
+  
+}
+
+    .nav-links{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        list-style-type: none;
+        width: 100%;    
+        height: 55px;
+        flex-wrap: wrap;
+
+    }
+a {
+        font-size: 0.95rem;
+        font-weight: 500;
+        display: block;
+        padding: 0.4rem 0.3rem;
+        color: var(--text-secondary);
+        white-space: wrap;
+        transition: width 0.3s ease;
+        position: relative;
+  }
+
+ a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+ a:hover{
+    color: var(--accent);
+  
+   
+  }
+
+
+
+ a:hover::after {
+    width: 100%;
+}
+
+.branco{
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: white;
+        white-space: wrap;
+        transition: width 0.3s ease;
+        position: relative;
+        background: rgba(10, 10, 15, 0.85);
+}
+.branco:hover{
+    color: var(--text-primary);
+}
+.branco::after{
+    content: '';
+    position: absolute;
+     bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--text-primary);
+    transition: width 0.3s ease;
+}
+ .branco:hover::after {
+    width: 50%;
+}
+.cima{
+    margin-top: 32px;
+}
+
+/*
+'   Agora vou colocar as imagens na tag <a></a>
+
+*/
+
+.homepage{
+    display: flex;
+    width: 24px;
+    height: 24px;
+
+    background: url("../assets/casa.svg");
+   
+}
+.sessao h1{
+    font-size: 3em;
+    transition: color 0.5s ease;
+}
+.sessao h1:hover{
+    color: var(--text-primary);
+}
+.sobre{
+     display: flex;
+    width: 24px;
+    height: 24px;
+
+    background: url("../assets/sobre.svg");
+    
+}
+
+.contato{
+     display: flex;
+    width: 24px;
+    height: 24px;
+
+    background: url("../assets/contato.svg");
+    
+}
+main{   
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: var(--text-secondary);
+       background: rgba(10, 10, 15, 0.85);
+     
+        
+    }
+ 
+    main h3{
+        font-size: 2em;
+    }
+  article{
+    width: 100%;
+    height: 400px;
+   
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 48px;
+    
+  }
+  skills h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    
+}
+
+.skill-tag {
+    padding: 0.5rem 1rem;
+  
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.skill-tag i {
+    font-size: 2rem;
+}
+
+    main p{
+        font-size: 1.2em;
+        color: var(--text-secondary);
+         font-family: "Inter", sans-serif;
+        text-align:center;
+    }
+
+    footer{
+        display: flex;
+     
+        justify-content: center;
+        align-items: center;
+        padding: 20px 12px;
+      
+       background: url("../assets/server.jpg") no-repeat center center;
+        background-size: cover;
+        width: 100%;
+
+    }
+   footer a{
+    font-family: "Inter", sans-serif;
+   }
+
+
+    .instagram{
+        width: 24px;
+        height: 24px;
+        display: flex;
+        
+        background: url("../assets/icon2.png");
+
+    }
+
+  
+    .email{
+        display: flex;
+        width: 24px;
+        height: 24px;
+      
+        background: url("../assets/email.svg");
+
+           
+    }
+.js{
+ color:#F7DF1E;
+}
+
+.html{
+    color: #E34F26;
+}
+.css{
+    color: #663399 ;
+}
+
+span i{
+    font-size: 2em;
+}
+    #autor{
+
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background: url("../assets/fundo3.jpg") no-repeat center center;
+    }
+
+    
+ .content{
+    
+     background: rgba(10, 10, 15, 0.85);
+     color: var(--text-secondary);
+     text-align: center;
+     line-height: 1.4;
+    
+     
+ }
+
+     .content h2{
+        
+        font-size:2rem;
+         font-family: "Archivo Black";
+         animation: texto 1s infinite;
+        
+     }
+
+     .content p{
+        font-family: "Inter";
+        font-size: 1em;
+        padding: 10px;
+ 
+ 
+    }
+
+
+    @keyframes texto{
+        50%{
+            transform: translateY(-4px);
+            text-shadow: 1px 1px 1px black;
+            font-size: 3rem;
+        }
+    }
+}
+
