@@ -349,8 +349,7 @@ main{
         justify-content: center;
         align-items: center;
         padding: 20px 12px;
-        position: absolute;
-        bottom: 0;
+      
        background: url("../assets/server.jpg") no-repeat center center;
         background-size: cover;
         width: 100%;
